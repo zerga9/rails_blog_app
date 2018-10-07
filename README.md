@@ -1,5 +1,7 @@
 # Rails Blog App
 
+Rails refresher 
+
 #### Setup
 
 * Clone this repository
