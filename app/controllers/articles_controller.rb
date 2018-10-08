@@ -1,5 +1,7 @@
 class ArticlesController < ApplicationController
-  http_basic_authenticate_with name: 'dhh', password: 'secret', except: %i[index show]
+  unless Rails.env.test?
+    http_basic_authenticate_with name: 'dhh', password: 'secret', except: %i[index show]
+  end
 
   def index
     @articles = Article.all
